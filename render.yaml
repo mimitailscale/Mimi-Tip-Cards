@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: venmo-card
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/technicians
+    envVars:
+      - key: NODE_VERSION
+        value: 20

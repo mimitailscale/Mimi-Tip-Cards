@@ -1,0 +1,170 @@
+:root {
+  --text: #25231f;
+  --panel: rgba(255, 253, 250, 0.93);
+  --border: #e3d2bb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(rgba(12, 10, 8, 0.46), rgba(12, 10, 8, 0.46)),
+    url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1800&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.app {
+  width: min(860px, 100%);
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 18px;
+  color: #fffdf7;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+}
+
+.hero h1 {
+  margin: 0.25rem 0 0.6rem;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+}
+
+.hero-line {
+  margin: 0.2rem 0;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  opacity: 0.95;
+  margin: 0;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 14px 32px rgba(37, 35, 31, 0.2);
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.tech-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.tech-name-btn {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  padding: 14px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
+}
+
+.tech-name-btn:nth-child(6n + 1) { background: linear-gradient(135deg, #e95f5f, #d74a7a); }
+.tech-name-btn:nth-child(6n + 2) { background: linear-gradient(135deg, #db8d2c, #c4682d); }
+.tech-name-btn:nth-child(6n + 3) { background: linear-gradient(135deg, #3b9d76, #2d7f98); }
+.tech-name-btn:nth-child(6n + 4) { background: linear-gradient(135deg, #4f8ae9, #685fd4); }
+.tech-name-btn:nth-child(6n + 5) { background: linear-gradient(135deg, #ae5ed4, #d14ea6); }
+.tech-name-btn:nth-child(6n + 6) { background: linear-gradient(135deg, #2f9f9f, #2f73a4); }
+
+.tech-name-btn:hover {
+  transform: translateY(-1px);
+}
+
+.tech-name-btn.active {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+.actions {
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+.actions h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.35rem;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 12px;
+  padding: 13px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn.venmo {
+  background: linear-gradient(135deg, #0a92ff, #005fd8);
+}
+
+.btn.cashapp {
+  background: linear-gradient(135deg, #00d14f, #00a83f);
+}
+
+.status {
+  margin: 12px 0 0;
+  font-size: 0.95rem;
+  display: none;
+}
+
+.status.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .buttons,
+  .tech-list {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    background-attachment: scroll;
+  }
+}

@@ -1,0 +1,21 @@
+
+> venmo-card@1.0.0 start
+> node server.js
+
+[dotenv@17.3.1] injecting env (2) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+Tip selector app running on http://localhost:4000
+Storage: Google Sheet (https://docs.google.com/spreadsheets/d/e/2PACX-1vS7_3XcyHhHnh-39XNYHOcTgR57yNXn2xe-IYD59N-C4PH8wkl4_BNVWP5jNBuIOeR-1BcWkIEfSME5/pub?gid=0&single=true&output=csv)
+
+> venmo-card@1.0.0 start
+> node server.js
+
+[dotenv@17.3.1] injecting env (2) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+Tip selector app running on http://localhost:4000
+Storage: Google Sheet (https://docs.google.com/spreadsheets/d/e/2PACX-1vS7_3XcyHhHnh-39XNYHOcTgR57yNXn2xe-IYD59N-C4PH8wkl4_BNVWP5jNBuIOeR-1BcWkIEfSME5/pub?gid=0&single=true&output=csv)
+
+> venmo-card@1.0.0 start
+> node server.js
+
+[dotenv@17.3.1] injecting env (2) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Tip selector app running on http://localhost:4000
+Storage: Google Sheet (https://docs.google.com/spreadsheets/d/e/2PACX-1vS7_3XcyHhHnh-39XNYHOcTgR57yNXn2xe-IYD59N-C4PH8wkl4_BNVWP5jNBuIOeR-1BcWkIEfSME5/pub?gid=0&single=true&output=csv)

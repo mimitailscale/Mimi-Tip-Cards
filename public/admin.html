@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technician Directory Admin</title>
+    <link rel="stylesheet" href="styles.css?v=20260308" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <p class="eyebrow">Staff Directory</p>
+        <h1>Technician Directory Admin</h1>
+        <p>Add, edit, or remove technicians and tipping links.</p>
+      </header>
+
+      <section class="panel manage-panel">
+        <h2>Edit Technician List</h2>
+        <form id="add-form" class="add-form">
+          <input id="new-name" type="text" placeholder="Technician name" required />
+          <input id="new-venmo" type="url" placeholder="Venmo link (optional)" />
+          <input id="new-cashapp" type="url" placeholder="Cash App link (optional)" />
+          <button type="submit" class="btn dark">Add Technician</button>
+        </form>
+
+        <div id="manage-list" class="manage-list"></div>
+        <p id="manage-status" class="status"></p>
+      </section>
+    </main>
+
+    <script src="admin.js?v=20260308"></script>
+  </body>
+</html>
