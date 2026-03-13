@@ -1,7 +1,12 @@
 :root {
-  --text: #403a34;
-  --panel: rgba(255, 255, 255, 0.88);
-  --border: #d8cdc0;
+  --text: #1c3b46;
+  --panel: rgba(255, 255, 255, 0.86);
+  --border: #8fbfce;
+  --teal-dark: #1f6a7b;
+  --teal-mid: #2f7f92;
+  --teal-light: #5aa7b9;
+  --sea: #3f9f8b;
+  --sea-dark: #2f7e6f;
 }
 
 * {
@@ -13,8 +18,8 @@ body {
   font-family: "Avenir Next", "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    linear-gradient(rgba(255, 252, 248, 0.72), rgba(255, 252, 248, 0.72)),
-    url("assets/floral-bg.jpg");
+    linear-gradient(rgba(214, 242, 247, 0.78), rgba(214, 242, 247, 0.78)),
+    url("assets/mimi-bg.png");
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
@@ -30,10 +35,10 @@ body {
 .hero {
   text-align: center;
   margin-bottom: 18px;
-  color: #33281f;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.58);
-  border: 1px solid rgba(216, 205, 192, 0.75);
+  color: #1b3a45;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(143, 191, 206, 0.7);
   border-radius: 14px;
   padding: 12px 14px;
 }
@@ -61,7 +66,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 20px;
-  box-shadow: 0 14px 32px rgba(37, 35, 31, 0.2);
+  box-shadow: 0 14px 32px rgba(28, 59, 70, 0.2);
   margin-bottom: 16px;
 }
 
@@ -85,16 +90,16 @@ label {
 
 .tech-item.active-tech {
   padding: 8px;
-  border: 2px solid #8f7d6e;
+  border: 2px solid #6aa7b8;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .tech-name-btn {
   width: 100%;
-  border: 1px solid #8a7668;
+  border: 1px solid #2f7f92;
   border-radius: 14px;
-  color: #fff;
+  color: #ffffff;
   font-weight: 900;
   font-size: 1.15rem;
   line-height: 1.2;
@@ -102,8 +107,8 @@ label {
   text-transform: uppercase;
   letter-spacing: 0.02em;
   cursor: pointer;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
-  background: #9b8878;
+  box-shadow: 0 6px 14px rgba(31, 106, 123, 0.25);
+  background: linear-gradient(135deg, var(--teal-mid), var(--teal-dark));
 }
 
 .tech-name-btn:hover {
@@ -111,19 +116,19 @@ label {
 }
 
 .tech-name-btn.active {
-  background: #6f8677;
-  border-color: #5d7465;
-  box-shadow: 0 10px 22px rgba(93, 116, 101, 0.35);
+  background: linear-gradient(135deg, #5aa7b9, #2f7f92);
+  border-color: #4b99aa;
+  box-shadow: 0 10px 22px rgba(75, 153, 170, 0.35);
 }
 
 .inline-actions {
   display: grid;
   gap: 8px;
-  border: 3px solid #8f7d6e;
+  border: 3px solid #6aa7b8;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.95);
   padding: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px rgba(31, 106, 123, 0.2);
 }
 
 .tip-heading {
@@ -132,7 +137,7 @@ label {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  color: #57483c;
+  color: #1f5c6a;
 }
 
 .buttons {
@@ -152,17 +157,17 @@ label {
   min-height: 50px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(31, 106, 123, 0.25);
 }
 
 .btn.venmo {
-  background: linear-gradient(135deg, #5f95ca, #3f6e9d);
-  box-shadow: 0 10px 20px rgba(63, 110, 157, 0.35);
+  background: linear-gradient(135deg, #3b8aa0, #1e6376);
+  box-shadow: 0 10px 20px rgba(30, 99, 118, 0.35);
 }
 
 .btn.cashapp {
-  background: linear-gradient(135deg, #78b187, #4f8c62);
-  box-shadow: 0 10px 20px rgba(79, 140, 98, 0.35);
+  background: linear-gradient(135deg, #43a48d, #2f7e6f);
+  box-shadow: 0 10px 20px rgba(47, 126, 111, 0.35);
 }
 
 .status {
@@ -184,12 +189,12 @@ label {
   margin: 8px auto 0;
   padding: 14px 16px;
   text-align: center;
-  color: #ffffff;
+  color: #0f3a47;
   font-weight: 800;
-  background: rgba(0, 0, 0, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(143, 191, 206, 0.7);
   border-radius: 14px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.6);
 }
 
 .site-footer p {
@@ -197,7 +202,7 @@ label {
 }
 
 .site-footer a {
-  color: #ffffff;
+  color: #0f3a47;
   font-weight: 800;
 }
 

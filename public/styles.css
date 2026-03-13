@@ -1,7 +1,7 @@
 :root {
-  --text: #25231f;
-  --panel: rgba(255, 253, 250, 0.93);
-  --border: #e3d2bb;
+  --text: #1c3b46;
+  --panel: rgba(255, 255, 255, 0.9);
+  --border: #8fbfce;
 }
 
 * {
@@ -13,10 +13,10 @@ body {
   font-family: "Avenir Next", "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    linear-gradient(rgba(12, 10, 8, 0.46), rgba(12, 10, 8, 0.46)),
-    url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1800&q=80");
+    linear-gradient(rgba(214, 242, 247, 0.82), rgba(214, 242, 247, 0.82)),
+    url("assets/mimi-bg.png");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-attachment: fixed;
   min-height: 100vh;
   padding: 16px;
@@ -30,8 +30,8 @@ body {
 .hero {
   text-align: center;
   margin-bottom: 18px;
-  color: #fffdf7;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+  color: #1b3a45;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .hero h1 {
@@ -57,7 +57,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 20px;
-  box-shadow: 0 14px 32px rgba(37, 35, 31, 0.2);
+  box-shadow: 0 14px 32px rgba(28, 59, 70, 0.2);
   margin-bottom: 16px;
 }
 
@@ -86,22 +86,22 @@ label {
   text-transform: uppercase;
   letter-spacing: 0.02em;
   cursor: pointer;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 6px 14px rgba(31, 106, 123, 0.2);
 }
 
-.tech-name-btn:nth-child(6n + 1) { background: linear-gradient(135deg, #e95f5f, #d74a7a); }
-.tech-name-btn:nth-child(6n + 2) { background: linear-gradient(135deg, #db8d2c, #c4682d); }
-.tech-name-btn:nth-child(6n + 3) { background: linear-gradient(135deg, #3b9d76, #2d7f98); }
-.tech-name-btn:nth-child(6n + 4) { background: linear-gradient(135deg, #4f8ae9, #685fd4); }
-.tech-name-btn:nth-child(6n + 5) { background: linear-gradient(135deg, #ae5ed4, #d14ea6); }
-.tech-name-btn:nth-child(6n + 6) { background: linear-gradient(135deg, #2f9f9f, #2f73a4); }
+.tech-name-btn:nth-child(6n + 1) { background: linear-gradient(135deg, #2f7f92, #1f6a7b); }
+.tech-name-btn:nth-child(6n + 2) { background: linear-gradient(135deg, #3c96a7, #2d6f84); }
+.tech-name-btn:nth-child(6n + 3) { background: linear-gradient(135deg, #4aa48f, #2f7e6f); }
+.tech-name-btn:nth-child(6n + 4) { background: linear-gradient(135deg, #5aa7b9, #3d8ea3); }
+.tech-name-btn:nth-child(6n + 5) { background: linear-gradient(135deg, #3f8b97, #296a78); }
+.tech-name-btn:nth-child(6n + 6) { background: linear-gradient(135deg, #2d7f73, #246357); }
 
 .tech-name-btn:hover {
   transform: translateY(-1px);
 }
 
 .tech-name-btn.active {
-  outline: 3px solid #fff;
+  outline: 3px solid rgba(255, 255, 255, 0.9);
   outline-offset: 2px;
 }
 
@@ -133,15 +133,15 @@ label {
   padding: 13px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(31, 106, 123, 0.25);
 }
 
 .btn.venmo {
-  background: linear-gradient(135deg, #0a92ff, #005fd8);
+  background: linear-gradient(135deg, #3b8aa0, #1e6376);
 }
 
 .btn.cashapp {
-  background: linear-gradient(135deg, #00d14f, #00a83f);
+  background: linear-gradient(135deg, #43a48d, #2f7e6f);
 }
 
 .status {
