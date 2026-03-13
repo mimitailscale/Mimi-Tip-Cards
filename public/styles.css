@@ -137,11 +137,11 @@ label {
 }
 
 .btn.venmo {
-  background: linear-gradient(135deg, #3b8aa0, #1e6376);
+  background: linear-gradient(135deg, #0a92ff, #005fd8);
 }
 
 .btn.cashapp {
-  background: linear-gradient(135deg, #43a48d, #2f7e6f);
+  background: linear-gradient(135deg, #00d14f, #00a83f);
 }
 
 .status {

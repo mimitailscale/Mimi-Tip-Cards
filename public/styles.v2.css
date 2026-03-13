@@ -161,13 +161,13 @@ label {
 }
 
 .btn.venmo {
-  background: linear-gradient(135deg, #3b8aa0, #1e6376);
-  box-shadow: 0 10px 20px rgba(30, 99, 118, 0.35);
+  background: linear-gradient(135deg, #0a92ff, #005fd8);
+  box-shadow: 0 10px 20px rgba(0, 95, 216, 0.35);
 }
 
 .btn.cashapp {
-  background: linear-gradient(135deg, #43a48d, #2f7e6f);
-  box-shadow: 0 10px 20px rgba(47, 126, 111, 0.35);
+  background: linear-gradient(135deg, #00d14f, #00a83f);
+  box-shadow: 0 10px 20px rgba(0, 168, 63, 0.35);
 }
 
 .status {
