@@ -2,7 +2,7 @@ const techList = document.getElementById('tech-list');
 const statusEl = document.getElementById('status');
 
 const csvUrl = (window.APP_CONFIG && window.APP_CONFIG.googleSheetCsvUrl) || '';
-const fallbackCsvUrl = 'technicians.csv';
+const fallbackCsvUrl = 'technicians.csv?v=20260412a';
 let technicians = [];
 let selectedTechId = '';
 
@@ -141,6 +141,18 @@ async function loadFromApi() {
   return Array.isArray(payload) ? payload : [];
 }
 
+function mergeTechnicians(primaryList, fallbackList) {
+  const seen = new Set(primaryList.map((tech) => tech.id || toSlug(tech.name)));
+  const missing = fallbackList.filter((tech) => {
+    const id = tech.id || toSlug(tech.name);
+    if (seen.has(id)) return false;
+    seen.add(id);
+    return true;
+  });
+
+  return [...primaryList, ...missing].sort((a, b) => a.name.localeCompare(b.name));
+}
+
 function renderTechnicianList() {
   const previous = selectedTechId;
   techList.innerHTML = '';
@@ -243,7 +255,9 @@ async function loadTechnicians() {
     setStatus('Loading technicians...');
     if (csvUrl) {
       try {
-        technicians = await loadFromGoogleSheet(csvUrl);
+        const sheetTechnicians = await loadFromGoogleSheet(csvUrl);
+        const fallbackTechnicians = await loadFromFallbackCsv().catch(() => []);
+        technicians = mergeTechnicians(sheetTechnicians, fallbackTechnicians);
       } catch (sheetError) {
         technicians = await loadFromFallbackCsv();
         setStatus(
