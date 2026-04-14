@@ -3,6 +3,7 @@ const statusEl = document.getElementById('status');
 
 const csvUrl = (window.APP_CONFIG && window.APP_CONFIG.googleSheetCsvUrl) || '';
 const fallbackCsvUrl = 'technicians.csv?v=20260412a';
+const hiddenTechnicianIds = new Set(['tiffany']);
 let technicians = [];
 let selectedTechId = '';
 
@@ -153,6 +154,10 @@ function mergeTechnicians(primaryList, fallbackList) {
   return [...primaryList, ...missing].sort((a, b) => a.name.localeCompare(b.name));
 }
 
+function removeHiddenTechnicians(list) {
+  return list.filter((tech) => !hiddenTechnicianIds.has(tech.id || toSlug(tech.name)));
+}
+
 function renderTechnicianList() {
   const previous = selectedTechId;
   techList.innerHTML = '';
@@ -257,16 +262,18 @@ async function loadTechnicians() {
       try {
         const sheetTechnicians = await loadFromGoogleSheet(csvUrl);
         const fallbackTechnicians = await loadFromFallbackCsv().catch(() => []);
-        technicians = mergeTechnicians(sheetTechnicians, fallbackTechnicians);
+        technicians = removeHiddenTechnicians(
+          mergeTechnicians(sheetTechnicians, fallbackTechnicians)
+        );
       } catch (sheetError) {
-        technicians = await loadFromFallbackCsv();
+        technicians = removeHiddenTechnicians(await loadFromFallbackCsv());
         setStatus(
           'Loaded local backup list. Google Sheet may be blocked by browser/network.',
           true
         );
       }
     } else {
-      technicians = await loadFromApi();
+      technicians = removeHiddenTechnicians(await loadFromApi());
     }
 
     renderTechnicianList();
