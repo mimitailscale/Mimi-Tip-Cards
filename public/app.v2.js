@@ -2,7 +2,7 @@ const techList = document.getElementById('tech-list');
 const statusEl = document.getElementById('status');
 
 const csvUrl = (window.APP_CONFIG && window.APP_CONFIG.googleSheetCsvUrl) || '';
-const fallbackCsvUrl = 'technicians.csv?v=20260412a';
+const fallbackCsvUrl = 'technicians.csv?v=20261015b';
 const hiddenTechnicianIds = new Set(['tiffany', 'ken', 'mia']);
 let technicians = [];
 let selectedTechId = '';
