@@ -159,7 +159,13 @@ function mergeTechnicians(primaryList, fallbackList) {
 }
 
 function removeHiddenTechnicians(list) {
-  return list.filter((tech) => !hiddenTechnicianIds.has(tech.id || toSlug(tech.name)));
+  return list
+    .filter((tech) => !hiddenTechnicianIds.has(tech.id || toSlug(tech.name)))
+    .map((tech) =>
+      toSlug(tech.name) === 'vivi' || tech.id === 'vivi'
+        ? { ...tech, venmo: 'https://venmo.com/u/VanTuyetThi-Ho' }
+        : tech
+    );
 }
 
 function renderTechnicianList() {
