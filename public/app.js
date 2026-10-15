@@ -163,7 +163,7 @@ function removeHiddenTechnicians(list) {
     .filter((tech) => !hiddenTechnicianIds.has(tech.id || toSlug(tech.name)))
     .map((tech) =>
       toSlug(tech.name) === 'vivi' || tech.id === 'vivi'
-        ? { ...tech, venmo: 'https://venmo.com/u/VanTuyetThi-Ho' }
+        ? { ...tech, venmo: 'https://venmo.com/code?user_id=2962747495022592879&created=1723065671.386034' }
         : tech
     );
 }
