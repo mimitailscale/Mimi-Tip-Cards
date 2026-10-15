@@ -3,7 +3,7 @@ const statusEl = document.getElementById('status');
 
 const csvUrl = (window.APP_CONFIG && window.APP_CONFIG.googleSheetCsvUrl) || '';
 const fallbackCsvUrl = 'technicians.csv?v=20260412a';
-const hiddenTechnicianIds = new Set(['tiffany']);
+const hiddenTechnicianIds = new Set(['tiffany', 'ken', 'mia']);
 let technicians = [];
 let selectedTechId = '';
 
